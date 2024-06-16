@@ -1,0 +1,56 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Crear Nuevo Ticket de Soporte{% endblock %}
+
+{% block body %}
+
+    <link rel="stylesheet" href="{{ asset('css1/estilo2.css') }}">
+
+    <div class="container">
+        <div class="container mt-5">
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                </div>
+                <div class="card-body">
+                    <div class="card">
+                        <div class="container center-title">
+                            <h1 class="mb-0">¡Nos complace ayudarte! Bienvenido al Sistema de Soporte.</h1>
+                        </div>
+                    </div>
+
+                    {{ form_start(form, {'attr': {'class': 'form'}}) }}
+                    <div class="card">
+                        <div class="card-header bg-primary text-white">
+                            <h2 class="mb-0">Crear Nuevo Ticket de Soporte</h2>
+
+                            <div class="form-group">
+                                {{ form_label(form.email, 'Correo Electrónico') }}
+                                {{ form_widget(form.email, {'attr': {'class': 'form-control', 'placeholder': 'Escriba su correo aquí...'}}) }}
+                                {{ form_errors(form.email) }}
+                            </div>
+                            <div class="form-group">
+                                {{ form_label(form.mensaje, 'Descripción') }}
+                                {{ form_widget(form.mensaje, {'attr': {'class': 'form-control', 'placeholder': 'Escriba su mensaje aquí...'}}) }}
+                                {{ form_errors(form.mensaje) }}
+                            </div>
+                            <div class="form-group text-center mt-4">
+                                {{ form_end(form) }}
+                                <div class="button-container">
+                                <button class="btn btn-lg btn-success" type="submit">Enviar</button>
+                               <a href="http://localhost:4200/home" class="btn btn-success">Volver al Inicio</a>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-center mt-3">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    {% block javascripts %}{% endblock %}
+{% endblock %}

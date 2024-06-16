@@ -1,0 +1,87 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Inicio de Sesión{% endblock %}
+
+{% block body %}
+    <form method="post" class="form" id="login-form">
+        {% if error %}
+            <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+        {% endif %}
+
+        {% if app.user %}
+            <div class="mb-5">
+                Has iniciado sesión como {{ app.user.userIdentifier }}, <a href="#" id="logout-link">Cerrar Sesión</a>
+            </div>
+        {% endif %}
+        
+        <div class="back-container">
+            <a href="http://localhost:4200/home" onclick="history.back();">
+                <img src="../images1/flecha.png" alt="Flecha para volver atrás">
+            </a>
+        </div>
+        
+        <h1 class="h3 mb-3 font-weight-normal">Inicio Sesión</h1>
+        
+        <label id="login" for="username" class="sr-only"><span class="far fa-user p-2"></span>Correo</label>
+        <input type="email" value="{{ last_username }}" name="_username" id="username" class="form-control" placeholder="escriba su correo aqui.." autocomplete="email" required autofocus>
+        
+        <label id="login" for="password" class="sr-only">Contraseña</label>
+        <input type="password" name="_password" id="password" class="form-control" placeholder="escriba su contraseña.." autocomplete="current-password" required>
+
+        <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
+
+        <div class="header-action">
+            <button type="submit" class="btn btn-lg btn-primary" id="button">Iniciar Sesión</button>
+        </div>
+        
+        <div class="text-center pt-3 text-muted">No eres miembro? <a href="http://localhost:8000/register">Registrarse</a></div>
+    </form>
+
+    <script>
+        document.getElementById('login-form').addEventListener('submit', function(event) {
+            event.preventDefault(); 
+            
+            var form = event.target;
+            var formData = new FormData(form);
+            
+            fetch(form.action, {
+                method: form.method,
+                body: formData,
+                headers: {
+                    'X-Requested-With': 'XMLHttpRequest'
+                }
+            }).then(response => {
+                if (response.ok) {
+                    window.location.href = 'http://localhost:4200/home';
+                } else {
+                    response.text().then(text => {
+                        console.error('Login failed:', text);
+                        alert('Inicio de sesión fallido. Verifique sus credenciales.');
+                    });
+                }
+            }).catch(error => {
+                console.error('Network error:', error);
+                alert('Ocurrió un error de red. Inténtelo de nuevo.');
+            });
+        });
+
+        document.getElementById('logout-link').addEventListener('click', function(event) {
+            event.preventDefault(); 
+            
+            fetch('{{ path('app_logout') }}', {
+                method: 'POST',
+                headers: {
+                    'X-Requested-With': 'XMLHttpRequest',
+                    'Content-Type': 'application/x-www-form-urlencoded'
+                }
+            }).then(response => {
+                
+                    window.location.href = 'http://localhost:4200/home';
+                
+            }).catch(error => {
+                console.error('Network error:', error);
+                alert('Ocurrió un error de red. Inténtelo de nuevo.');
+            });
+        });
+    </script>
+{% endblock %}

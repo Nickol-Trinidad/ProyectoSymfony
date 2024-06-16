@@ -1,0 +1,190 @@
+/* Estilos personalizados para el formulario de soporte */
+.container {
+    margin-top: 50px;
+}
+
+
+.card-header {
+    border-bottom: none;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+    color: #ece7e7;
+}
+
+.btn {
+    border-radius: 30px;
+    padding: 10px 50px;
+    font-size: 16px;
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+.btn-secondary {
+    background-color: #6c757d;
+    border: none;
+}
+
+.btn-secondary:hover {
+    background-color: #5a6268;
+}
+.btn-success {
+    background-color: #dcee3dd8;
+    display: flex;
+    justify-content: space-between; /* Opcional: para espacio entre botones */
+    gap: 10px; /
+}
+
+.button-container {
+    display: grid;
+    grid-template-columns: auto auto; /* Dos columnas automáticas */
+    gap: 10px; /* Espacio entre botones */
+}
+
+
+input {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    background-color: white;
+    outline: none;
+    resize: none;
+    border: 0;
+    font-family: 'Montserrat', sans-serif;
+    transition: all 0.3s;
+    border-bottom: 2px solid #bebed2;
+    color:rgb(8, 8, 8);
+}
+input:focus {
+    border-bottom: 2px solid #78788c
+}
+p:before {
+    content: attr(type);
+    display: block;
+    margin: 28px 0 0;
+    font-size: 14px;
+    color: #0a0a0a
+}
+
+.alert {
+    padding: 5px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+
+.alert-success {
+    color: #155724;
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+}
+
+.p{
+    color: rgb(245, 242, 242);
+
+}
+
+.form {
+    max-width: 400px;
+    margin-top: 3rem !important;
+    margin: 0 auto;
+    padding: 20px;
+    background: #222121;
+    border-radius: 8px;
+    box-shadow: 0 0 30px rgb(252, 246, 246);
+}
+
+.form h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    border: 1px solid #5756562f;
+    box-sizing: border-box;
+}
+
+
+
+.btn-primary {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+.mt-3 {
+    margin-top: 1rem !important;
+}
+
+sr-only{
+    color: #fff;
+}
+
+label{
+    color: #f7f1f1;
+}
+
+div{
+    color: #fff;
+}
+
+h1{
+    color: #0a0a0a;
+}
+h2{
+    color: #f7f5f5;
+}
+
+a{
+    color: #0e0e0d;
+}
+
+body {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: #2f373ea8;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f0f0; 
+    background: url(../images1/Co.png);
+}
+
+.center-title {
+    text-align: center;
+    color: white;
+}
+
+.mb-0{
+    color: white;
+}
+
+.button {
+    padding: 5px 20px;
+    background-color: #fdfd28ee;
+    color: rgb(12, 12, 12);
+    text-decoration: none;
+    border-radius: 5px;
+    
+}
+
+#a{
+
+    color: #0a0a0a;
+}

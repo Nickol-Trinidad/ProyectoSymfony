@@ -1,0 +1,224 @@
+/* styles.css */
+.form {
+    max-width: 500px;
+    margin-top: 3rem !important;
+    margin: 0 auto;
+    padding: 20px;
+    background: #222121;
+    border-radius: 8px;
+    box-shadow: 0 0 30px rgb(252, 246, 246);
+}
+
+/* Estilo para los labels */
+label {
+    color: #000; /* Color negro */
+    font-weight: bold; /* Negrita */
+}
+
+/* Estilo para el input de correo */
+#email-input {
+    color: #000; /* Color del texto negro */
+    background-color: #f5f5f5; /* Color de fondo */
+    border: 1px solid #ccc; /* Color del borde */
+    padding: 10px; /* Relleno interno */
+    border-radius: 5px; /* Esquinas redondeadas */
+    font-size: 16px; /* Tamaño de la fuente */
+}
+
+/* Estilo para el input de contraseña */
+#password-input {
+    color: #000; /* Color del texto negro */
+    background-color: #f5f5f5; /* Color de fondo */
+    border: 1px solid #ccc; /* Color del borde */
+    padding: 10px; /* Relleno interno */
+    border-radius: 5px; /* Esquinas redondeadas */
+    font-size: 16px; /* Tamaño de la fuente */
+}
+
+/* Estilo general para los inputs en el formulario */
+.form-control {
+    width: 100%; /* Ocupa el 100% del ancho disponible */
+    margin-bottom: 15px; /* Espacio inferior */
+    box-sizing: border-box; /* Incluir relleno y borde en el tamaño total del elemento */
+}
+
+
+
+.form h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    color: #000;
+}
+
+.form-check-input {
+    margin-top: 10px;
+}
+
+.btn-primary {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+.mt-3 {
+    margin-top: 1rem !important;
+}
+
+sr-only{
+    color: #fff;
+}
+
+label{
+    color: #f7f1f1;
+}
+
+div{
+    color: #fff;
+}
+
+h1{
+    color: #0a0a0a;
+}
+
+a{
+    color: #faf627;
+}
+
+body {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: #2f373ea8;
+    font-family: 'Roboto', sans-serif;
+    background-color: #f0f0f0; 
+    background: url(../images1/Co.png);
+}
+
+#login{
+
+    color: #e9e4e4;
+
+}
+#username{
+
+    color: #0e0d0d;
+
+}
+#password{
+
+    color: #111010;
+
+}
+
+body {
+    margin: 0;
+    background: url(../images1/Co.png);
+
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    background-color: white;
+    outline: none;
+    resize: none;
+    border: 0;
+    font-family: 'Montserrat', sans-serif;
+    transition: all 0.3s;
+    border-bottom: 2px solid #bebed2;
+    color:white;
+}
+input:focus {
+    border-bottom: 2px solid #78788c
+}
+p:before {
+    content: attr(type);
+    display: block;
+    margin: 28px 0 0;
+    font-size: 14px;
+    color: #5a5a5a
+}
+
+.alert {
+    padding: 5px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+
+.alert-success {
+    color: #155724;
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+}
+
+.button {
+    padding: 10px 20px;
+    background-color: #f8f8e7be;
+    color: rgb(12, 12, 12);
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+#button {
+    padding: 10px 20px;
+    background-color: #fcfcf9e3;
+    color: rgb(12, 12, 12);
+    text-decoration: none;
+    border-radius: 10px;
+}
+
+/* Estilos personalizados para el formulario de soporte */
+.container {
+    margin-top: 50px;
+}
+
+.card {
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+    border-bottom: none;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.btn {
+    border-radius: 50px;
+    padding: 10px 20px;
+    font-size: 16px;
+}
+
+.btn-secondary {
+    background-color: #6c757d;
+    border: none;
+}
+
+.btn-secondary:hover {
+    background-color: #5a6268;
+}

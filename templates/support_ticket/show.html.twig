@@ -1,0 +1,54 @@
+
+
+{% block stylesheets %}
+	<link rel="stylesheet" href="{{ asset('css1/estilo1.css') }}">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+{% endblock %}
+
+{% block body %}
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="">Soporte</a>
+        <div class="collapse navbar-collapse">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ path('app_support_ticket_index') }}">Tickets de Soporte</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+	<div class="container">
+
+		<form action="" method="POST" class="form-container">
+			<div class="card bg-dark">
+		<h2 class="mt-4 mb-3 bg-dark">Detalles del Ticket de Soporte</h2>
+				<div class="form-group bg-dark">
+					<h5 class="card-title">ID del Ticket:
+						{{ support_ticket.id }}</h5>
+					<p class="card-text bg-dark">
+						<strong>Email:</strong>
+						{{ support_ticket.email }}</p>
+					<p class="card-text  bg-dark">
+						<strong>Nombre:</strong>
+						{{ support_ticket.nombre }}</p>
+					<p class="card-text  bg-dark">
+						<strong>Mensaje:</strong>
+						{{ support_ticket.mensaje }}</p>
+				</div>
+			<div class="mt-4">
+				<button class="button"><a href="{{ path('app_support_ticket_index') }}" id="a">Volver al Inicio</a></button>
+				<button class="button"> <a href="{{ path('app_support_ticket_index', {'id': support_ticket.id}) }}" id="a">Editar</a> </button>
+			</div>
+			</div>
+
+
+
+</form>
+
+		</form>
+	</div>
+</body>
+
+{% block javascripts %}{% endblock %}
+{% endblock %}

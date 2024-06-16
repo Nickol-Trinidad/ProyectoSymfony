@@ -1,0 +1,149 @@
+/* Resetear estilos predeterminados */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos para el cuerpo de la página */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    background: url(../images1/Co.png);
+}
+
+/* Estilos para el contenedor principal */
+.container {
+    max-width: 800px;
+    margin: 100px auto;
+    text-align: center;
+}
+
+/* Estilos para el título principal */
+h1 {
+    color: #f7f1f1;
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+/* Estilos para el párrafo de descripción */
+p {
+    color: #666;
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+/* Estilos para el botón */
+.btn {
+    display: inline-block;
+    background-color:#2d7ed4;
+    color: #fcf9f9;
+    text-decoration: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+/* Estilos para la tabla */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para las celdas del encabezado */
+.table th {
+    background-color: #2d7ed4;
+    color: #fff;
+    font-weight: bold;
+    padding: 10px;
+    text-align: left;
+}
+
+/* Estilos para las filas impares */
+.table tbody tr:nth-child(odd) {
+    background-color: #f2f2f2;
+}
+
+/* Estilos para las celdas de datos */
+.table td {
+    padding: 10px;
+    color: rgb(12, 12, 12);
+}
+
+
+/* Estilos para los botones en la columna de acciones */
+.table .btn {
+    padding: 6px 12px;
+    border-radius: 4px;
+    text-decoration: none;
+    color: #fff;
+    transition: background-color 0.3s ease;
+}
+
+/* Estilos para el botón "Ver" */
+.table .btn-primary {
+    background-color: #2d7ed4;
+}
+
+/* Estilos para el botón "Editar" */
+.table .btn-warning {
+    background-color:#2d7ed4;
+    margin: 5px;
+    color: rgb(248, 245, 245);
+}
+
+/* Estilos para el botón "Crear Nuevo" */
+.btn-success {
+    display: block;
+    width: 200px;
+    margin: 20px auto;
+}
+
+/* Asegúrate de que todos los inputs y textareas tengan el texto en color negro */
+input[type="text"],
+input[type="email"],
+textarea {
+    color: black;
+    /* Puedes añadir otros estilos si lo necesitas */
+    border: 1px solid #ccc; /* Borde gris claro */
+    padding: 10px; /* Espaciado interno */
+    font-family: 'Arial', sans-serif; /* Fuente */
+    font-size: 14px; /* Tamaño de la fuente */
+}
+
+/* Opcional: Añade un borde y fondo a los inputs y textareas al estar en foco */
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+    border: 1px solid #000; /* Borde negro */
+    background-color: #f0f0f0; /* Fondo gris claro */
+    outline: none; /* Elimina el contorno azul por defecto */
+}
+
+.alert {
+    padding: 5px;
+    margin-bottom: 10px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.alert-success {
+    color: #155724;
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+}
+
+
+.button-container {
+    display: flex;
+    justify-content: space-between; 
+}

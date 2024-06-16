@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Registro{% endblock %}
+
+{% block body %}
+
+    {{ form_start(registrationForm, {'attr': {'class': 'form'}}) }}
+    <a href="http://localhost:4200/home" onclick="history.back();">
+        <img src="{{ asset('images1/flecha.png') }}" alt="Back">
+    </a>
+    <h1>Registro</h1>
+    <div class="registro">
+        {{ form_start(registrationForm) }}
+        {{ form_row(registrationForm.email, {'attr': {'class': 'form-control', 'id': 'email-input'}}) }}
+        {{ form_row(registrationForm.plainPassword, {
+            'label': 'Contraseña',
+            'attr': {'class': 'form-control', 'id': 'password-input'}
+        }) }}
+        {{ form_errors(registrationForm) }}
+        {{ form_row(registrationForm.Aceptar_los_terminos) }}
+        <button type="submit" id="button">Registrarse</button>
+        {{ form_end(registrationForm) }}
+    </div>
+
+    {% for flash_message in app.session.flashbag.get('success') %}
+        <div class="alert alert-success">
+            {{ flash_message }}
+        </div>
+    {% endfor %}
+{% endblock %}

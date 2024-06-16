@@ -1,0 +1,60 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}SupportTicket
+{% endblock %}
+
+{% block body %}
+	<link rel="stylesheet" href="{{ asset('css1/estilo3.css') }}">
+
+	<div class="container">
+		<form action="{{ path('app_support_ticket_update_bulk') }}" method="POST" class="form-container">
+			<h1>Tu Ticket de Soporte</h1>
+			<div class="table-responsive">
+				<table class="table table-striped">
+					<thead>
+						<tr>
+							<th>ID</th>
+							<th>Email</th>
+							<th>Nombre</th>
+							<th>Mensaje</th>
+							<th>Acciones</th>
+						</tr>
+					</thead>
+					<tbody>
+						{% for support_ticket in support_tickets %}
+							<tr>
+								<td>{{ support_ticket.id }}</td>
+								<td><input type="email" name="support_tickets[{{ support_ticket.id }}][email]" class="form-control" value="{{ support_ticket.email }}" required></td>
+								<td><input type="text" name="support_tickets[{{ support_ticket.id }}][nombre]" class="form-control" value="{{ support_ticket.nombre }}" required></td>
+								<td>
+									<textarea name="support_tickets[{{ support_ticket.id }}][mensaje]" class="form-control" rows="2" required>{{ support_ticket.mensaje }}</textarea>
+								</td>
+								<td>
+									<button type="submit" class="btn btn-sm btn-primary">Guardar</button>
+								</td>
+							</tr>
+						{% else %}
+							<tr>
+								<td colspan="5">No se encontraron registros</td>
+							</tr>
+						{% endfor %}
+					</tbody>
+
+				</table>
+				<div class="button-container">
+					<a href="http://localhost:4200/home" class="btn btn-success">Volver a Inicio</a>
+					<a href="{{ path('app_support_ticket_new') }}" class="btn btn-success">Crear Nuevo</a>
+				</div>
+			</div>
+		</form>
+		<div class="container mt-3">
+			{% for label, messages in app.flashes %}
+				<div class="alert alert-{{ label }}">
+					{% for message in messages %}
+						<p>{{ message }}</p>
+					{% endfor %}
+				</div>
+			{% endfor %}
+		</div>
+	</div>
+{% endblock %}
